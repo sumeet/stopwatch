@@ -6,7 +6,7 @@ class Stopwatch(object):
     object or as a context manager.
 
     NOTE: This should not be used an accurate benchmark of Python code, but a
-    way to check how much time has elapsed between actions. And this does not
+    way to check how much time has elapsed between actions. This does not
     account for changes or blips in the system clock.
 
     Instance attributes:
@@ -54,8 +54,8 @@ class Stopwatch(object):
         """Return the number of seconds that have elapsed since this
         `Stopwatch` started timing.
 
-        This is used for checking how much time has elapsed while the timer is
-        still running.
+        Useful for checking how much time has elapsed while the timer is still
+        running.
         """
         assert not self.stop_time, \
             "Can't check `time_elapsed` on an ended `Stopwatch`."
